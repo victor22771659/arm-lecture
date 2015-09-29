@@ -17,8 +17,9 @@ fibonacci:
 	popeq {r3,r4,pc}
 	
 	cmp r0,#0
-	it le
+	itt le
 	pople {r3,r4,pc}
+	movle r0,#0
 	
 	sub r0,#1
 	bl fibonacci
